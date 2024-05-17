@@ -4,6 +4,10 @@ const props = defineProps({
   tableData: {
     type: Object,
     required: true
+  },
+  section: {
+    type: String,
+    required: true
   }
 })
 const tableId = props.tableData.label.toLowerCase()
@@ -15,7 +19,12 @@ const tableId = props.tableData.label.toLowerCase()
     <div class="columns">
       <div class="columns__item" v-for="(column, index) in props.tableData.columns" :key="index">
         <h4>{{ column.label }}</h4>
-        <TableRoll :items="column.items" />
+        <TableRoll
+          :items="column.items"
+          :section="props.section"
+          :table="props.tableData.name"
+          :column="column.name"
+        />
       </div>
     </div>
   </article>

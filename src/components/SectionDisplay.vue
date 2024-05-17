@@ -13,19 +13,34 @@ const people = peopleTables
   <section id="nature">
     <h2>Nature</h2>
     <div>
-      <TableDisplay v-for="(table, index) in nature" :key="index" :table-data="table" />
+      <TableDisplay
+        v-for="(table, index) in nature"
+        :key="index"
+        :table-data="table"
+        section="nature"
+      />
     </div>
   </section>
   <section id="civilisation">
     <h2>Civilisation</h2>
     <div>
-      <TableDisplay v-for="(table, index) in civilisation" :key="index" :table-data="table" />
+      <TableDisplay
+        v-for="(table, index) in civilisation"
+        :key="index"
+        :table-data="table"
+        section="civilisation"
+      />
     </div>
   </section>
   <section id="people">
     <h2>People</h2>
     <div>
-      <TableDisplay v-for="(table, index) in people" :key="index" :table-data="table" />
+      <TableDisplay
+        v-for="(table, index) in people"
+        :key="index"
+        :table-data="table"
+        section="people"
+      />
     </div>
   </section>
 </template>

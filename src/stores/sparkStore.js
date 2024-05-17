@@ -1,23 +1,58 @@
 import { defineStore } from 'pinia'
 
-export const useSparksStore = defineStore('sparks', () => {
-  const results = {}
+export const useSparkStore = defineStore('sparks', {
+  state: () => ({
+    nature: {
+      land: {},
+      sky: {},
+      water: {},
+      weather: {},
+      flora: {},
+      fauna: {},
+      feature: {},
+      wonder: {},
+      otherworld: {}
+    },
+    civilisation: {
+      holding: {},
+      bailey: {},
+      keep: {},
+      food: {},
+      goods: {},
+      luxuries: {},
+      drama: {},
+      woe: {},
+      news: {}
+    },
+    people: {
+      appearance: {},
+      voice: {},
+      personality: {},
+      relationship: {},
+      desire: {},
+      task: {},
+      background: {},
+      ailment: {},
+      heraldry: {}
+    },
+    combat: {}
+  }),
 
-  function setSpark(section, table, column, value) {
-    results[section][table][column] = value
-  }
-
-  function clearSection(section) {
-    if (Object.prototype.hasOwnProperty.call(results, section)) {
-      delete results[section]
+  actions: {
+    setSpark(section, table, column, value) {
+      this[section] = this[section] || {}
+      this[section][table] = this[section][table] || {}
+      this[section][table][column] = value
+    },
+    clearSection(section) {
+      if (Object.prototype.hasOwnProperty.call(this, section)) {
+        delete this[section]
+      }
+    },
+    clearTable(section, table) {
+      if (Object.prototype.hasOwnProperty.call(this, section[table])) {
+        delete this[section][table]
+      }
     }
   }
-
-  function clearTable(section, table) {
-    if (Object.prototype.hasOwnProperty.call(results, section[table])) {
-      delete results[section][table]
-    }
-  }
-
-  return { results, setSpark, clearSection, clearTable }
 })

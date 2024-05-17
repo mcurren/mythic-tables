@@ -1,11 +1,14 @@
 <script setup>
 import SectionDisplay from '@/components/SectionDisplay.vue'
+import RollDice from '@/components/RollDice.vue'
 </script>
 
 <template>
   <header>
     <h1>Mythic Tables</h1>
   </header>
+
+  <RollDice />
 
   <main>
     <SectionDisplay />
