@@ -1,23 +1,25 @@
 import { defineStore } from 'pinia'
 
-export const useRollsStore = defineStore('rolls', () => {
-  const results = {
+export const useRollStore = defineStore('rolls', {
+  state: () => ({
     d6: [],
     d12: []
-  }
+  }),
 
-  function addRoll(key, value) {
-    results[key].push(value)
+  actions: {
+    addRoll(sides) {
+      const key = Number.isInteger(sides) ? `d${sides}` : sides
+      const num = Number.isInteger(sides) ? sides : parseInt(sides.substring(1))
+      const randomNumber = Math.floor(Math.random() * num) + 1
+      this[key].push(randomNumber)
+    },
+    clearRolls(sides) {
+      const key = Number.isInteger(sides) ? `d${sides}` : sides
+      this[key].length = 0
+    },
+    clearAllRolls() {
+      this.clearRolls('d6')
+      this.clearRolls('d12')
+    }
   }
-
-  function clearRolls(key) {
-    results[key].length = 0
-  }
-
-  function clearAllRolls() {
-    clearRolls('d6')
-    clearRolls('d12')
-  }
-
-  return { results, addRoll, clearRolls, clearAllRolls }
 })
