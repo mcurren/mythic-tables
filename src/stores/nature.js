@@ -1,9 +1,11 @@
 export const natureTables = [
   {
     label: 'Land',
+    name: 'land',
     columns: [
       {
         label: 'Character',
+        name: 'character',
         items: [
           'Barren',
           'Dry',
@@ -21,6 +23,7 @@ export const natureTables = [
       },
       {
         label: 'Landscape',
+        name: 'landscape',
         items: [
           'Marsh',
           'Heath',
@@ -40,9 +43,11 @@ export const natureTables = [
   },
   {
     label: 'Sky',
+    name: 'sky',
     columns: [
       {
         label: 'Tone',
+        name: 'tone',
         items: [
           'Glittering',
           'Violet',
@@ -60,6 +65,7 @@ export const natureTables = [
       },
       {
         label: 'Texture',
+        name: 'texture',
         items: [
           'Aurora',
           'Haze',
@@ -79,9 +85,11 @@ export const natureTables = [
   },
   {
     label: 'Water',
+    name: 'water',
     columns: [
       {
         label: 'Tone',
+        name: 'tone',
         items: [
           'Crystal',
           'Teal',
@@ -99,6 +107,7 @@ export const natureTables = [
       },
       {
         label: 'Texture',
+        name: 'texture',
         items: [
           'Silk',
           'Ripples',
@@ -118,9 +127,11 @@ export const natureTables = [
   },
   {
     label: 'Weather',
+    name: 'weather',
     columns: [
       {
         label: 'Description',
+        name: 'description',
         items: [
           'Gentle',
           'Fleeting',
@@ -138,6 +149,7 @@ export const natureTables = [
       },
       {
         label: 'Element',
+        name: 'element',
         items: [
           'Rain',
           'Gusts',
@@ -157,9 +169,11 @@ export const natureTables = [
   },
   {
     label: 'Flora',
+    name: 'flora',
     columns: [
       {
         label: 'Nature',
+        name: 'nature',
         items: [
           'Aromatic',
           'Ashen',
@@ -177,6 +191,7 @@ export const natureTables = [
       },
       {
         label: 'Form',
+        name: 'form',
         items: [
           'Grasses',
           'Heather',
@@ -196,9 +211,11 @@ export const natureTables = [
   },
   {
     label: 'Fauna',
+    name: 'fauna',
     columns: [
       {
         label: 'Nature',
+        name: 'nature',
         items: [
           'Watchful',
           'Helpful',
@@ -216,6 +233,7 @@ export const natureTables = [
       },
       {
         label: 'Form',
+        name: 'form',
         items: [
           'Ungulates',
           'Songbirds',
@@ -235,9 +253,11 @@ export const natureTables = [
   },
   {
     label: 'Feature',
+    name: 'feature',
     columns: [
       {
         label: 'Nature',
+        name: 'nature',
         items: [
           'Buried',
           'Colourful',
@@ -255,6 +275,7 @@ export const natureTables = [
       },
       {
         label: 'Form',
+        name: 'form',
         items: [
           'Brook',
           'Seat',
@@ -274,9 +295,11 @@ export const natureTables = [
   },
   {
     label: 'Wonder',
+    name: 'wonder',
     columns: [
       {
         label: 'Theme',
+        name: 'theme',
         items: [
           'Pleasure',
           'Secrets',
@@ -294,6 +317,7 @@ export const natureTables = [
       },
       {
         label: 'Element',
+        name: 'element',
         items: [
           'Light',
           'Flames',
@@ -313,9 +337,11 @@ export const natureTables = [
   },
   {
     label: 'Otherworld',
+    name: 'otherworld',
     columns: [
       {
         label: 'Character',
+        name: 'character',
         items: [
           'Acidic',
           'Black',
@@ -333,6 +359,7 @@ export const natureTables = [
       },
       {
         label: 'Landscape',
+        name: 'landscape',
         items: [
           'Flats',
           'Labryrinth',

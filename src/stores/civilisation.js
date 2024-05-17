@@ -1,9 +1,11 @@
 export const civilisationTables = [
   {
     label: 'Holding',
+    name: 'holding',
     columns: [
       {
         label: 'Style',
+        name: 'style',
         items: [
           'Dark',
           'Ruined',
@@ -21,6 +23,7 @@ export const civilisationTables = [
       },
       {
         label: 'Feature',
+        name: 'feature',
         items: [
           'Turrets',
           'Tower',
@@ -40,9 +43,11 @@ export const civilisationTables = [
   },
   {
     label: 'Bailey',
+    name: 'bailey',
     columns: [
       {
         label: 'Style',
+        name: 'style',
         items: [
           'Filthy',
           'Abandoned',
@@ -60,6 +65,7 @@ export const civilisationTables = [
       },
       {
         label: 'Feature',
+        name: 'feature',
         items: [
           'Marketplace',
           'Forge',
@@ -79,9 +85,11 @@ export const civilisationTables = [
   },
   {
     label: 'Keep',
+    name: 'keep',
     columns: [
       {
         label: 'Centrepiece',
+        name: 'centrepiece',
         items: [
           'Hearth',
           'Throne',
@@ -99,6 +107,7 @@ export const civilisationTables = [
       },
       {
         label: 'Decoration',
+        name: 'decoration',
         items: [
           'Antlers',
           'Silver',
@@ -118,9 +127,11 @@ export const civilisationTables = [
   },
   {
     label: 'Food',
+    name: 'food',
     columns: [
       {
         label: 'Quality',
+        name: 'quality',
         items: [
           'Spiced',
           'Herbal',
@@ -138,6 +149,7 @@ export const civilisationTables = [
       },
       {
         label: 'Type',
+        name: 'type',
         items: [
           'Fish',
           'Fruit',
@@ -157,9 +169,11 @@ export const civilisationTables = [
   },
   {
     label: 'Goods',
+    name: 'goods',
     columns: [
       {
         label: 'Theme',
+        name: 'theme',
         items: [
           'Military',
           'Abundant',
@@ -177,6 +191,7 @@ export const civilisationTables = [
       },
       {
         label: 'Type',
+        name: 'type',
         items: [
           'Textile',
           'Livestock',
@@ -196,9 +211,11 @@ export const civilisationTables = [
   },
   {
     label: 'Luxuries',
+    name: 'luxuries',
     columns: [
       {
         label: 'Rarity',
+        name: 'rarity',
         items: [
           'Antique',
           'Intricate',
@@ -216,6 +233,7 @@ export const civilisationTables = [
       },
       {
         label: 'Type',
+        name: 'type',
         items: [
           'Jewel',
           'Wine',
@@ -235,9 +253,11 @@ export const civilisationTables = [
   },
   {
     label: 'Drama',
+    name: 'drama',
     columns: [
       {
         label: 'Theme',
+        name: 'theme',
         items: [
           'Betrayal',
           'Jealousy',
@@ -255,6 +275,7 @@ export const civilisationTables = [
       },
       {
         label: 'Detail',
+        name: 'detail',
         items: [
           'Brawl',
           'Poison',
@@ -274,9 +295,11 @@ export const civilisationTables = [
   },
   {
     label: 'Woe',
+    name: 'woe',
     columns: [
       {
         label: 'Descriptor',
+        name: 'descriptor',
         items: [
           'Secretive',
           'Violent',
@@ -294,6 +317,7 @@ export const civilisationTables = [
       },
       {
         label: 'Incident',
+        name: 'incident',
         items: [
           'Disease',
           'Famine',
@@ -313,9 +337,11 @@ export const civilisationTables = [
   },
   {
     label: 'News',
+    name: 'news',
     columns: [
       {
         label: 'Subject',
+        name: 'subject',
         items: [
           'Duel',
           'Birth',
@@ -333,6 +359,7 @@ export const civilisationTables = [
       },
       {
         label: 'Symbol',
+        name: 'symbol',
         items: [
           'Pensive',
           'Joyous',

@@ -1,9 +1,11 @@
 export const peopleTables = [
   {
     label: 'Appearance',
+    name: 'appearance',
     columns: [
       {
         label: 'Physique',
+        name: 'physique',
         items: [
           'Delicate',
           'Short',
@@ -21,6 +23,7 @@ export const peopleTables = [
       },
       {
         label: 'Dress',
+        name: 'dress',
         items: [
           'Armoured',
           'Tattered',
@@ -40,9 +43,11 @@ export const peopleTables = [
   },
   {
     label: 'Voice',
+    name: 'voice',
     columns: [
       {
         label: 'Tone',
+        name: 'tone',
         items: [
           'Whispering',
           'Soothing',
@@ -60,6 +65,7 @@ export const peopleTables = [
       },
       {
         label: 'Manner',
+        name: 'manner',
         items: [
           'Formal',
           'Poetic',
@@ -79,9 +85,11 @@ export const peopleTables = [
   },
   {
     label: 'Personality',
+    name: 'personality',
     columns: [
       {
         label: 'Demeanour',
+        name: 'demeanour',
         items: [
           'Cautious',
           'Spiritual',
@@ -99,6 +107,7 @@ export const peopleTables = [
       },
       {
         label: 'Interest',
+        name: 'interest',
         items: [
           'Botany',
           'History',
@@ -118,9 +127,11 @@ export const peopleTables = [
   },
   {
     label: 'Relationship',
+    name: 'relationship',
     columns: [
       {
         label: 'State',
+        name: 'state',
         items: [
           'Adoring',
           'Reluctant',
@@ -138,6 +149,7 @@ export const peopleTables = [
       },
       {
         label: 'Connection',
+        name: 'connection',
         items: [
           'Kin',
           'Friend',
@@ -157,9 +169,11 @@ export const peopleTables = [
   },
   {
     label: 'Desire',
+    name: 'desire',
     columns: [
       {
         label: 'Ambition',
+        name: 'ambition',
         items: [
           'Escape',
           'Wealth',
@@ -177,6 +191,7 @@ export const peopleTables = [
       },
       {
         label: 'Motive',
+        name: 'motive',
         items: [
           'Freedom',
           'Love',
@@ -196,9 +211,11 @@ export const peopleTables = [
   },
   {
     label: 'Task',
+    name: 'task',
     columns: [
       {
         label: 'Action',
+        name: 'action',
         items: [
           'Investigate',
           'Capture',
@@ -216,6 +233,7 @@ export const peopleTables = [
       },
       {
         label: 'Subject',
+        name: 'subject',
         items: [
           'Knight',
           'Seer',
@@ -235,9 +253,11 @@ export const peopleTables = [
   },
   {
     label: 'Background',
+    name: 'background',
     columns: [
       {
         label: 'Upbringing',
+        name: 'upbringing',
         items: [
           'Deprived',
           'Pious',
@@ -255,6 +275,7 @@ export const peopleTables = [
       },
       {
         label: 'Memory',
+        name: 'memory',
         items: [
           'War',
           'Migration',
@@ -274,9 +295,11 @@ export const peopleTables = [
   },
   {
     label: 'Ailment',
+    name: 'ailment',
     columns: [
       {
         label: 'Descriptor',
+        name: 'descriptor',
         items: [
           'Hidden',
           'Mild',
@@ -294,6 +317,7 @@ export const peopleTables = [
       },
       {
         label: 'Symptom',
+        name: 'symptom',
         items: [
           'Insomnia',
           'Migranes',
@@ -313,9 +337,11 @@ export const peopleTables = [
   },
   {
     label: 'Heraldry',
+    name: 'heraldry',
     columns: [
       {
         label: 'Palette',
+        name: 'palette',
         items: [
           'Light',
           'Hot',
@@ -333,6 +359,7 @@ export const peopleTables = [
       },
       {
         label: 'Symbol',
+        name: 'symbol',
         items: [
           'Beast',
           'Bird',
