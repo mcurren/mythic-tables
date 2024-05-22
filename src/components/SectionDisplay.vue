@@ -60,7 +60,7 @@ div {
   display: grid;
   grid-template-columns: 100%;
   gap: 0.5rem;
-  margin-block: 1rem;
+  margin-block-start: 1rem;
 }
 @media (min-width: 650px) {
   section {

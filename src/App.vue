@@ -1,6 +1,6 @@
 <script setup>
 import SectionDisplay from '@/components/SectionDisplay.vue'
-import RollDice from '@/components/RollDice.vue'
+import DiceRoll from '@/components/DiceRoll.vue'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import RollDice from '@/components/RollDice.vue'
     <h1>Mythic Tables</h1>
   </header>
 
-  <RollDice />
+  <!-- <DiceRoll /> -->
 
   <main>
     <SectionDisplay />
@@ -28,7 +28,14 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.25rem;
   max-width: 100%;
+}
+
+@media (min-width: 1500px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>

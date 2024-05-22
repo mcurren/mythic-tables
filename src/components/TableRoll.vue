@@ -1,11 +1,11 @@
 <script setup>
-import { computed, onMounted } from 'vue'
-import { useSparkStore } from '@/stores/sparkStore'
-const store = useSparkStore()
+import { onMounted } from 'vue'
+const emit = defineEmits(['rollOnColumn'])
 const props = defineProps({
-  items: {
-    type: Array,
-    required: true
+  result: {
+    type: [String],
+    required: true,
+    default: 'TBD'
   },
   section: {
     type: String,
@@ -20,24 +20,19 @@ const props = defineProps({
     required: true
   }
 })
-const result = props.items.length
-  ? computed(() => props.items[Math.floor(Math.random() * props.items.length)])
-  : 'TBD'
-
 onMounted(() => {
-  store.setSpark(props.section, props.table, props.column, result)
+  emit('rollOnColumn', props.section, props.table, props.column)
 })
 </script>
 
 <template>
   <p>
-    {{ store[props.section][props.table][props.column] }}
+    {{ result }}
   </p>
 </template>
 
 <style scoped>
 p {
-  /* font-family: var(--font-sans); */
   font-size: 1.3em;
   font-weight: 400;
   font-style: italic;
