@@ -34,8 +34,9 @@ main {
 
 @media (min-width: 1500px) {
   main {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>

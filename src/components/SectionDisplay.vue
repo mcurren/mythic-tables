@@ -73,6 +73,7 @@ div {
     flex: unset;
   }
   div {
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
 }
