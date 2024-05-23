@@ -1,6 +1,14 @@
 <script setup>
 import { useRollStore } from '@/stores/rollStore'
 const store = useRollStore()
+function rollBoth() {
+  store.addRoll(12)
+  store.addRoll(6)
+}
+function clearAll() {
+  store.clearRolls(12)
+  store.clearRolls(6)
+}
 </script>
 
 <template>
@@ -24,7 +32,10 @@ const store = useRollStore()
       </div>
     </section>
     <section>
-      <button v-on:click="store.clearAllRolls()">Clear All</button>
+      <div>
+        <button v-on:click="rollBoth()">Roll Both</button>
+        <button v-on:click="clearAll()">Clear All</button>
+      </div>
     </section>
   </aside>
 </template>
@@ -36,8 +47,12 @@ aside {
   gap: 2rem;
   justify-items: center;
 }
+section {
+  display: flex;
+  justify-content: space-around;
+}
 p {
-  font-size: 1.4em;
+  font-size: 2em;
   text-align: center;
 }
 </style>

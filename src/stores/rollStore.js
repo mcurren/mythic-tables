@@ -16,10 +16,6 @@ export const useRollStore = defineStore('rolls', {
     clearRolls(sides) {
       const key = Number.isInteger(sides) ? `d${sides}` : sides
       this[key].length = 0
-    },
-    clearAllRolls() {
-      this.clearRolls('d6')
-      this.clearRolls('d12')
     }
   }
 })

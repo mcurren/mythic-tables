@@ -26,14 +26,11 @@ function rollOnTable(section, table, columns) {
   tableClass.value = 'rolled'
   setTimeout(() => {
     tableClass.value = ''
-    console.log('class removed')
   }, 300)
   columns.forEach((column) => {
-    console.log(column)
     let result = 'TBD'
     if (column.items.length) {
       result = column.items[Math.floor(Math.random() * column.items.length)]
-      console.log(result)
     }
     store.setSpark(section, table, column.name, result)
   })
