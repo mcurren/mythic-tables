@@ -6,7 +6,7 @@ const combat = combatTables
 
 <template>
   <section id="combat" class="spark-tables">
-    <h2 class="spark-tables__title">Combat</h2>
+    <h2 class="page-title">Combat</h2>
     <div class="spark-tables__content">
       <TableDisplay
         v-for="(table, index) in combat"

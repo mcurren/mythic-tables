@@ -6,7 +6,7 @@ const nature = natureTables
 
 <template>
   <section id="nature" class="spark-tables">
-    <h2 class="spark-tables__title">Nature</h2>
+    <h2 class="page-title">Nature</h2>
     <div class="spark-tables__content">
       <TableDisplay
         v-for="(table, index) in nature"

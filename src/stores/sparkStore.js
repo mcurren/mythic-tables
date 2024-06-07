@@ -35,7 +35,17 @@ export const useSparkStore = defineStore('sparks', {
       ailment: {},
       heraldry: {}
     },
-    combat: {}
+    combat: {
+      soldier: {},
+      weapon: {},
+      manoeuvres: {},
+      conflict: {},
+      duel: {},
+      battlefield: {},
+      deployment: {},
+      strategy: {},
+      event: {}
+    }
   }),
 
   actions: {

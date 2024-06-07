@@ -4,14 +4,40 @@ export const combatTables = [
     name: 'soldier',
     columns: [
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Quality',
+        name: 'quality',
+        items: [
+          'Mobile',
+          'Reluctant',
+          'Mounted',
+          'Renowned',
+          'Zealous',
+          'Conscript',
+          'Cowardly',
+          'Heavy',
+          'Bloodthirsty',
+          'Fancy',
+          'Fearsome',
+          'Mercenary'
+        ]
       },
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Type',
+        name: 'type',
+        items: [
+          'Skirmisher',
+          'Archer',
+          'Scout',
+          'Levy',
+          'Guard',
+          'Infiltrator',
+          'Raider',
+          'Veteran',
+          'Infantry',
+          'Rider',
+          'Charger',
+          'Knight'
+        ]
       }
     ]
   },
@@ -20,14 +46,40 @@ export const combatTables = [
     name: 'weapon',
     columns: [
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Descriptor',
+        name: 'descriptor',
+        items: [
+          'Short',
+          'Pole',
+          'Chain',
+          'Barbed',
+          'Forked',
+          'Curved',
+          'Weighted',
+          'Double',
+          'Crossed',
+          'Throwing',
+          'Thin',
+          'Long'
+        ]
       },
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Feature',
+        name: 'feature',
+        items: [
+          'Blade',
+          'Spear',
+          'Axe',
+          'Mace',
+          'Cleaver',
+          'Hammer',
+          'Spike',
+          'Hook',
+          'Club',
+          'Rod',
+          'Fang',
+          'Sword'
+        ]
       }
     ]
   },
@@ -36,14 +88,40 @@ export const combatTables = [
     name: 'manoeuvres',
     columns: [
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Action',
+        name: 'action',
+        items: [
+          'Feint',
+          'Strike',
+          'Boast',
+          'Defend',
+          'Negotiate',
+          'Flurry',
+          'Rush',
+          'Taunt',
+          'Jab',
+          'Charge',
+          'Onslaught',
+          'Provoke'
+        ]
       },
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Intent',
+        name: 'intent',
+        items: [
+          'Demoralise',
+          'Confuse',
+          'Exploit',
+          'Stall',
+          'Relocate',
+          'Observe',
+          'Defeat',
+          'Expose',
+          'Surprise',
+          'Stagger',
+          'Weaken',
+          'Intimidate'
+        ]
       }
     ]
   },
@@ -52,14 +130,40 @@ export const combatTables = [
     name: 'conflict',
     columns: [
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Dispute',
+        name: 'dispute',
+        items: [
+          'Border',
+          'Religion',
+          'Succession',
+          'Resource',
+          'Debt',
+          'Betrayal',
+          'Theft',
+          'Conquest',
+          'Marriage',
+          'Deceit',
+          'Waterway',
+          'Bloodfeud'
+        ]
       },
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Status',
+        name: 'status',
+        items: [
+          'War',
+          'Raids',
+          'Animosity',
+          'Truce',
+          'Skirmishes',
+          'Standoff',
+          'Occupation',
+          'Stalemate',
+          'Blockade',
+          'Tension',
+          'Forgotten',
+          'Negotiations'
+        ]
       }
     ]
   },
@@ -68,14 +172,40 @@ export const combatTables = [
     name: 'duel',
     columns: [
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Stipulation',
+        name: 'stipulation',
+        items: [
+          'Joust',
+          'Swords',
+          'Partner',
+          'Team',
+          'Unarmoured',
+          'Chained',
+          'Blood',
+          'Death',
+          'Surrender',
+          'Judged',
+          'Blunt',
+          'Javelins'
+        ]
       },
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Twist',
+        name: 'twist',
+        items: [
+          'Timed',
+          'Pit',
+          'Bridge',
+          'Immobile',
+          'Maze',
+          'Archers',
+          'Fire',
+          'Beasts',
+          'Mud',
+          'Night',
+          'Water',
+          'Cage'
+        ]
       }
     ]
   },
@@ -84,14 +214,40 @@ export const combatTables = [
     name: 'battlefield',
     columns: [
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Feature',
+        name: 'feature',
+        items: [
+          'River',
+          'Ruins',
+          'Hill',
+          'Forest',
+          'Lake',
+          'Outpost',
+          'Pass',
+          'Farm',
+          'Trail',
+          'Bridge',
+          'Wall',
+          'Dwelling'
+        ]
       },
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Detail',
+        name: 'detail',
+        items: [
+          'Smoke',
+          'Mud',
+          'Flies',
+          'Trenches',
+          'Tower',
+          'Boulders',
+          'Flowers',
+          'Streams',
+          'Thorns',
+          'Stink',
+          'Ravine',
+          'Tombs'
+        ]
       }
     ]
   },
@@ -100,14 +256,40 @@ export const combatTables = [
     name: 'deployment',
     columns: [
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Style',
+        name: 'style',
+        items: [
+          'Aggressive',
+          'Mobile',
+          'Tight',
+          'Deceptive',
+          'Shielded',
+          'Rigid',
+          'Flexible',
+          'Open',
+          'Focused',
+          'Dispersed',
+          'Reinforced',
+          'Defensive'
+        ]
       },
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Formation',
+        name: 'formation',
+        items: [
+          'Line',
+          'Column',
+          'Chevron',
+          'Ranks',
+          'Square',
+          'Circle',
+          'Flank',
+          'Skirmish',
+          'Block',
+          'Square',
+          'Wedge',
+          'Scatter'
+        ]
       }
     ]
   },
@@ -116,14 +298,40 @@ export const combatTables = [
     name: 'strategy',
     columns: [
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Plan',
+        name: 'plan',
+        items: [
+          'Encircle',
+          'Capture',
+          'Assault',
+          'Harass',
+          'Pillage',
+          'Outlast',
+          'Ambush',
+          'Overwhelm',
+          'Blockade',
+          'Divide',
+          'Focus',
+          'Counter'
+        ]
       },
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Twist',
+        name: 'twist',
+        items: [
+          'Darkness',
+          'Reserves',
+          'Diversion',
+          'Betrayal',
+          'Artillery',
+          'Camouflage',
+          'Bluff',
+          'Delay',
+          'Decoy',
+          'Bait',
+          'Sacrifice',
+          'Fire'
+        ]
       }
     ]
   },
@@ -132,14 +340,40 @@ export const combatTables = [
     name: 'event',
     columns: [
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Subject',
+        name: 'subject',
+        items: [
+          'Allies',
+          'Morale',
+          'Weather',
+          'Terrain',
+          'Strategy',
+          'Discipline',
+          'Animal',
+          'Opportunists',
+          'Deception',
+          'Leader',
+          'Loot',
+          'Weapons'
+        ]
       },
       {
-        label: '',
-        name: '',
-        items: []
+        label: 'Event',
+        name: 'event',
+        items: [
+          'Collapse',
+          'Attack',
+          'Slaughter',
+          'Stalemate',
+          'Stall',
+          'Falter',
+          'Sabotage',
+          'Scatter',
+          'Charge',
+          'Confusion',
+          'Worsening',
+          'Discovery'
+        ]
       }
     ]
   }

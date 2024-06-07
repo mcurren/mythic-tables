@@ -6,7 +6,7 @@ const civilisation = civilisationTables
 
 <template>
   <section id="civilisation" class="spark-tables">
-    <h2 class="spark-tables__title">Civilisation</h2>
+    <h2 class="page-title">Civilisation</h2>
     <div class="spark-tables__content">
       <TableDisplay
         v-for="(table, index) in civilisation"

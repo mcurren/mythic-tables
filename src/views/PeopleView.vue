@@ -6,7 +6,7 @@ const people = peopleTables
 
 <template>
   <section id="people" class="spark-tables">
-    <h2 class="spark-tables__title">People</h2>
+    <h2 class="page-title">People</h2>
     <div class="spark-tables__content">
       <TableDisplay
         v-for="(table, index) in people"
