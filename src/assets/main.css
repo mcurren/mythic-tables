@@ -64,6 +64,7 @@ a,
     justify-items: center;
     align-items: center;
     gap: 2.5vw;
+    min-height: 100vh;
   }
 }
 

@@ -4,7 +4,7 @@
   <header>
     <h1>Mythic Sparks</h1>
     <nav>
-      <RouterLink class="button" to="/">Random Page</RouterLink>
+      <RouterLink class="button" to="/">Inspiration</RouterLink>
       <RouterLink class="button" to="/nature">Nature</RouterLink>
       <RouterLink class="button" to="/civilisation">Civilisation</RouterLink>
       <RouterLink class="button" to="/people">People</RouterLink>

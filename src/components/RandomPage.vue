@@ -25,7 +25,7 @@ onMounted(() => {
   <aside>
     <section>
       <div class="control">
-        <button class="button" v-on:click="rollPage()">Roll Dice</button>
+        <button class="button" v-on:click="rollPage()">Roll</button>
       </div>
       <div class="results">
         <div class="results__column">
@@ -71,6 +71,8 @@ button {
   padding: 0.5em 1.5em;
   min-width: 100px;
   background-color: transparent;
+  font-family: inherit;
+  text-transform: uppercase;
 }
 .changed {
   color: var(--color-highlight);
