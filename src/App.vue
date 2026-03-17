@@ -12,9 +12,6 @@
       <RouterLink class="button" to="/npc">Make an NPC</RouterLink>
     </nav>
   </header>
-
-  <!-- <DiceRoll /> -->
-
   <main>
     <RouterView />
   </main>
@@ -42,32 +39,17 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem 2.5rem;
+  gap: 1em 1.5em;
   padding-block-start: 1rem;
   text-transform: lowercase;
 }
 nav a {
   padding: 0.3625em 2em;
-  /* border: 2px solid var(--color-highlight);
-  border-radius: 6px;
-  transition: all 300ms ease; */
 }
-/* nav a:hover,
-nav a.router-link-active {
-  background-color: var(--color-highlight);
-  color: var(--color-background);
-} */
 @media (min-width: 1200px) {
   nav {
     flex-direction: column;
     padding-block-start: 2rem;
   }
 }
-/* @media (min-width: 1500px) {
-  main {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
 </style>
