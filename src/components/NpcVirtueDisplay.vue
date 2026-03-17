@@ -60,6 +60,7 @@ div {
   gap: 1em;
 }
 .button {
+  font-size: 0.875em;
   border: 0;
   border-bottom: 1px solid var(--color-highlight);
   border-radius: 0;

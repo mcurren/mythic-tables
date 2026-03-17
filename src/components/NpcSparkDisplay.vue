@@ -40,14 +40,17 @@ onMounted(async () => {
 
 <template>
   <aside>
-    <p v-for="spark in props.npc.sparks" :key="spark.name">
-      <strong>{{ spark.label }}:</strong> <span>{{ spark.value }}</span>
-    </p>
+    <div class="sparks">
+      <p v-for="spark in props.npc.sparks" :key="spark.name">
+        <strong>{{ spark.label }}:</strong> <span>{{ spark.value }}</span>
+      </p>
+    </div>
+    <button class="button" @click="setSparks()">re-roll</button>
   </aside>
 </template>
 
 <style scoped>
-aside {
+.sparks {
   display: flex;
   flex-direction: column;
   gap: 0.25em;
@@ -66,5 +69,14 @@ strong {
   text-transform: uppercase;
   font-weight: 400;
   display: inline;
+}
+.button {
+  font-size: 0.875em;
+  border: 0;
+  border-bottom: 1px solid var(--color-highlight);
+  border-radius: 0;
+  padding: 0.25em;
+  white-space: nowrap;
+  margin-block-start: 0.5rem;
 }
 </style>
