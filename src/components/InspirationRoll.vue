@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
-const emit = defineEmits(['rollOnColumn'])
+const emit = defineEmits(['rollInspiration'])
 const props = defineProps({
   result: {
     type: [String],

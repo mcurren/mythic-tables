@@ -8,19 +8,19 @@ export const npcTable = [
         label: 'Servant',
         name: 'servant',
         guard: '2',
-        description: 'Single duty with little expertise'
+        description: 'Single duty with little expertise.'
       },
       {
         label: 'Guide',
         name: 'guide',
         guard: '4',
-        description: 'Handaxe (d6), javelin (d6), local knowledge'
+        description: 'Handaxe (d6), javelin (d6), local knowledge.'
       },
       {
         label: 'Sentry',
         name: 'sentry',
         guard: '3',
-        description: 'Billhook (d10 long), little appetite for combat'
+        description: 'Billhook (d10 long), little appetite for combat.'
       }
     ]
   },
@@ -39,13 +39,13 @@ export const npcTable = [
         label: 'Soldier-at-Arms',
         name: 'soldier-at-arms',
         guard: '6',
-        description: 'A2 (helm, shield), Spear (d6 hefty), shield (d4), battle worn'
+        description: 'A2 (helm, shield), Spear (d6 hefty), shield (d4), battle worn.'
       },
       {
         label: 'Archer',
         name: 'archer',
         guard: '3',
-        description: 'Shortbow (d6 long)'
+        description: 'Shortbow (d6 long).'
       }
     ]
   },
@@ -58,20 +58,20 @@ export const npcTable = [
         label: 'Sage',
         name: 'sage',
         guard: '2',
-        description: 'Holds immense knowledge in a particular area of expertise'
+        description: 'Holds immense knowledge in a particular area of expertise.'
       },
       {
         label: 'Alchemist',
         name: 'alchemist',
         guard: '2',
-        description: 'Creates poisons or quasi-medicinal potions'
+        description: 'Creates poisons or quasi-medicinal potions.'
       },
       {
         label: 'Sellsword',
         name: 'sellsword',
         guard: '7',
         description:
-          'A4 (coat, plates, helm, shield), Longsword (2d8 hefty), shield (d4), Generally only agrees to fights that they are confident they can win'
+          'A4 (coat, plates, helm, shield), Longsword (2d8 hefty), shield (d4), Generally only agrees to fights that they are confident they can win.'
       }
     ]
   }
@@ -83,7 +83,7 @@ export const squireTable = [
     name: 'squire',
     virtues: '2d6',
     guard: '1',
-    equipment: 'Dagger (d6), ',
+    equipment: 'Dagger (d6)',
     items: [
       'Cudgel (d8 hefty)',
       'Axe (d8 hefty)',

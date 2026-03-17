@@ -6,13 +6,15 @@ import CivilisationView from './views/CivilisationView.vue'
 import PeopleView from './views/PeopleView.vue'
 import CombatView from './views/CombatView.vue'
 import InspirationView from './views/InspirationView.vue'
+import NpcView from './views/NpcView.vue'
 
 const routes = [
   { path: '/', component: InspirationView },
   { path: '/nature', component: NatureView },
   { path: '/civilisation', component: CivilisationView },
   { path: '/people', component: PeopleView },
-  { path: '/combat', component: CombatView }
+  { path: '/combat', component: CombatView },
+  { path: '/npc', component: NpcView }
 ]
 
 const router = createRouter({

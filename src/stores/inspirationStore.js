@@ -19,7 +19,7 @@ export const useInspirationStore = defineStore('inspiration', {
 
   actions: {
     setInspiration(section, value) {
-      this[section] = this[section] || {}
+      this[section] = this[section] || ''
       this[section] = value
     },
     clearSection(section) {

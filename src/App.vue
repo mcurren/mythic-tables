@@ -9,6 +9,7 @@
       <RouterLink class="button" to="/civilisation">Civilisation</RouterLink>
       <RouterLink class="button" to="/people">People</RouterLink>
       <RouterLink class="button" to="/combat">Combat</RouterLink>
+      <RouterLink class="button" to="/npc">Make an NPC</RouterLink>
     </nav>
   </header>
 
@@ -46,7 +47,7 @@ nav {
   text-transform: lowercase;
 }
 nav a {
-  padding: 0.5em 2em;
+  padding: 0.3625em 2em;
   /* border: 2px solid var(--color-highlight);
   border-radius: 6px;
   transition: all 300ms ease; */
