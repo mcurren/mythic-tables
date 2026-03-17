@@ -26,7 +26,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <p>
+  <p @click="emit('rollOnColumn', props.section, props.table, props.column)">
     {{ result }}
   </p>
 </template>
@@ -37,5 +37,6 @@ p {
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.03em;
+  cursor: pointer;
 }
 </style>
