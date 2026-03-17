@@ -9,12 +9,12 @@ import InspirationView from './views/InspirationView.vue'
 import NpcView from './views/NpcView.vue'
 
 const routes = [
-  { path: '/', component: InspirationView },
-  { path: '/nature', component: NatureView },
-  { path: '/civilisation', component: CivilisationView },
-  { path: '/people', component: PeopleView },
-  { path: '/combat', component: CombatView },
-  { path: '/npc', component: NpcView }
+  { path: '/', name: 'inspiration', component: InspirationView },
+  { path: '/nature', name: 'nature', component: NatureView },
+  { path: '/civilisation', name: 'civilisation', component: CivilisationView },
+  { path: '/people', name: 'people', component: PeopleView },
+  { path: '/combat', name: 'combat', component: CombatView },
+  { path: '/npc', name: 'make an npc', component: NpcView }
 ]
 
 const router = createRouter({

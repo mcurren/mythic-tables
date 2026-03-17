@@ -1,15 +1,15 @@
-<script setup></script>
+<script setup>
+import router from './router'
+const navItems = router.getRoutes().map((route) => ({ name: route.name, path: route.path }))
+</script>
 
 <template>
   <header>
     <h1>Mythic Sparks</h1>
     <nav>
-      <RouterLink class="button" to="/">Inspiration</RouterLink>
-      <RouterLink class="button" to="/nature">Nature</RouterLink>
-      <RouterLink class="button" to="/civilisation">Civilisation</RouterLink>
-      <RouterLink class="button" to="/people">People</RouterLink>
-      <RouterLink class="button" to="/combat">Combat</RouterLink>
-      <RouterLink class="button" to="/npc">Make an NPC</RouterLink>
+      <RouterLink class="button" v-for="item in navItems" :key="item.path" :to="item.path">{{
+        item.name
+      }}</RouterLink>
     </nav>
   </header>
   <main>
