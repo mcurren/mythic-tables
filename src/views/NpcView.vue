@@ -96,7 +96,7 @@ section {
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
-  margin: 2em 2em 1em;
+  margin: 1em 2em;
 }
 .choice--type {
   font-size: 0.9em;
