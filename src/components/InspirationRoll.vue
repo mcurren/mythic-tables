@@ -13,7 +13,9 @@ const props = defineProps({
   }
 })
 onMounted(() => {
-  emit('rollInspiration', props.section)
+  if (props.result === '') {
+    emit('rollInspiration', props.section)
+  }
 })
 </script>
 

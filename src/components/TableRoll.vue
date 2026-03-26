@@ -21,7 +21,9 @@ const props = defineProps({
   }
 })
 onMounted(() => {
-  emit('rollOnColumn', props.section, props.table, props.column)
+  if (props.result === 'TBD') {
+    emit('rollOnColumn', props.section, props.table, props.column)
+  }
 })
 </script>
 
@@ -38,5 +40,9 @@ p {
   font-style: italic;
   letter-spacing: 0.03em;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+p:hover {
+  color: var(--color-heading);
 }
 </style>
