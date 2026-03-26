@@ -34,7 +34,7 @@ function rollOnTable(table) {
 <template>
   <article :id="props.tableData.name" :class="tableClass">
     <h3>
-      <button class="button" @click="rollOnTable(props.tableData)">
+      <button class="button roll-button" @click="rollOnTable(props.tableData)">
         {{ props.tableData.label }}
       </button>
     </h3>
@@ -72,7 +72,7 @@ h3 button {
   background-color: var(--color-background-soft);
   padding: 0.25em;
   /* border: 0; */
-  display: block;
+  /* display: block; */
   cursor: pointer;
   width: 100%;
 }
