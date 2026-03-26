@@ -1,6 +1,8 @@
 <script setup>
 import TableDisplay from '@/components/InspirationDisplay.vue'
 import { inspirationTable as inspiration } from '@/stores/inspiration'
+import { useSparkState } from '@/stores/sparkStore'
+const state = useSparkState()
 </script>
 
 <template>
@@ -14,6 +16,7 @@ import { inspirationTable as inspiration } from '@/stores/inspiration'
         section="inspiration"
       />
     </div>
+    <button @click="state.changeState('inspiration')" class="reroll-all">re-roll all</button>
   </section>
 </template>
 

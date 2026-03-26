@@ -66,3 +66,19 @@ export const useSparkStore = defineStore('sparks', {
     }
   }
 })
+
+export const useSparkState = defineStore('sparkState', {
+  state: () => ({
+    nature: 1,
+    civilisation: 1,
+    people: 1,
+    combat: 1,
+    inspiration: 1
+  }),
+
+  actions: {
+    changeState(section) {
+      this[section]++
+    }
+  }
+})

@@ -1,7 +1,9 @@
 <script setup>
 import TableDisplay from '@/components/TableDisplay.vue'
 import { combatTables } from '@/stores/combat'
+import { useSparkState } from '@/stores/sparkStore'
 const combat = combatTables
+const state = useSparkState()
 </script>
 
 <template>
@@ -15,6 +17,7 @@ const combat = combatTables
         section="combat"
       />
     </div>
+    <button @click="state.changeState('combat')" class="reroll-all">re-roll all</button>
   </section>
 </template>
 

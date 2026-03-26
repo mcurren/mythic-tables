@@ -1,8 +1,9 @@
 <script setup>
-import { ref } from 'vue'
-import { useSparkStore } from '@/stores/sparkStore'
+import { ref, watch } from 'vue'
+import { useSparkStore, useSparkState } from '@/stores/sparkStore'
 import TableRoll from '@/components/TableRoll.vue'
 const store = useSparkStore()
+const state = useSparkState()
 const props = defineProps({
   tableData: {
     type: Object,
@@ -35,6 +36,16 @@ function rollOnTable(section, table, columns) {
     store.setSpark(section, table, column.name, result)
   })
 }
+
+watch(
+  () => state[props.section],
+  async (newState, oldState) => {
+    if (newState !== oldState) {
+      rollOnTable(props.section, props.tableData.name, props.tableData.columns)
+      console.log('State changed, rolling on table:', props.tableData.name)
+    }
+  }
+)
 </script>
 
 <template>

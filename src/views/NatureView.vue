@@ -1,7 +1,9 @@
 <script setup>
 import TableDisplay from '@/components/TableDisplay.vue'
 import { natureTables } from '@/stores/nature'
+import { useSparkState } from '@/stores/sparkStore'
 const nature = natureTables
+const state = useSparkState()
 </script>
 
 <template>
@@ -15,6 +17,7 @@ const nature = natureTables
         section="nature"
       />
     </div>
+    <button @click="state.changeState('nature')" class="reroll-all">re-roll all</button>
   </section>
 </template>
 

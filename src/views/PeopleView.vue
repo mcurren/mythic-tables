@@ -1,7 +1,9 @@
 <script setup>
 import TableDisplay from '@/components/TableDisplay.vue'
 import { peopleTables } from '@/stores/people'
+import { useSparkState } from '@/stores/sparkStore'
 const people = peopleTables
+const state = useSparkState()
 </script>
 
 <template>
@@ -15,6 +17,7 @@ const people = peopleTables
         section="people"
       />
     </div>
+    <button @click="state.changeState('people')" class="reroll-all">re-roll all</button>
   </section>
 </template>
 

@@ -1,8 +1,10 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useInspirationStore } from '@/stores/inspirationStore'
+import { useSparkState } from '@/stores/sparkStore'
 import InspirationRoll from '@/components/InspirationRoll.vue'
 const store = useInspirationStore()
+const state = useSparkState()
 const props = defineProps({
   tableData: {
     type: Object,
@@ -29,6 +31,16 @@ function rollOnTable(table) {
   }
   store.setInspiration(table.name, result)
 }
+
+watch(
+  () => state['inspiration'],
+  async (newState, oldState) => {
+    if (newState !== oldState) {
+      rollOnTable(props.tableData)
+      console.log('State changed, rolling on table:', props.tableData.name)
+    }
+  }
+)
 </script>
 
 <template>
