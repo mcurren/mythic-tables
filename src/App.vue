@@ -5,7 +5,7 @@ const navItems = router.getRoutes().map((route) => ({ name: route.name, path: ro
 
 <template>
   <header>
-    <h1>Mythic Sparks</h1>
+    <h1><span>Mythic</span> Sparks</h1>
     <nav>
       <RouterLink class="button" v-for="item in navItems" :key="item.path" :to="item.path">{{
         item.name
@@ -24,8 +24,19 @@ header {
   max-width: 100%;
 }
 h1 {
-  font-weight: 700;
-  font-size: 3.4em;
+  font-weight: 400;
+  font-size: 5em;
+}
+h1 span {
+  display: block;
+  text-transform: lowercase;
+  letter-spacing: 0.35em;
+  font-size: 0.5em;
+}
+h1 span:before {
+  content: '\00A0';
+  display: inline-block;
+  /* width: 0.35em; */
 }
 main {
   display: flex;
@@ -40,11 +51,11 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em 1.5em;
-  padding-block-start: 1rem;
+  padding-block-start: 2rem;
   text-transform: lowercase;
 }
 nav a {
-  padding: 0.3625em 2em;
+  padding: 0.25em 1em;
 }
 @media (min-width: 1200px) {
   nav {
