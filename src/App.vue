@@ -15,6 +15,17 @@ const navItems = router.getRoutes().map((route) => ({ name: route.name, path: ro
   <main>
     <RouterView />
   </main>
+  <footer>
+    <p>
+      an independent tool for running Mythic Bastionland ©<a
+        href="https://bastionlandpress.com/"
+        target="_blank"
+        rel="noopener"
+        >Bastionland Press</a
+      >
+      | built by <a href="https://curren.me/labs" target="_blank" rel="noopener">michaelopolis</a>
+    </p>
+  </footer>
 </template>
 
 <style scoped>
@@ -62,5 +73,13 @@ nav a {
     flex-direction: column;
     padding-block-start: 2rem;
   }
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  padding: 3rem 2rem 0;
 }
 </style>
