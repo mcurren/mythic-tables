@@ -1,31 +1,23 @@
 <script setup>
-import { ref } from 'vue'
-import { npcTable as npcs } from '@/stores/npc'
-import { useNpcStore } from '@/stores/npcStore'
+import { computed } from 'vue'
+import { squireTable as squire } from '@/stores/npc'
+import { useSquireStore } from '@/stores/npcStore'
 
 import NpcVirtueDisplay from '@/components/NpcVirtueDisplay.vue'
 import NpcNameDisplay from '@/components/NpcNameDisplay.vue'
 import NpcSparkDisplay from '@/components/NpcSparkDisplay.vue'
 
-const npcStore = useNpcStore()
-const rarity = ref('')
-const type = ref('')
-let templates = []
+const npcStore = useSquireStore()
 
-function setRarity(value) {
-  rarity.value = value
-  npcStore.setValue('rarity', value)
-  templates = npcs.find((item) => item.name === value).items
-  setType('')
-}
-function setType(value) {
-  type.value = value
-  npcStore.setValue('type', value)
+const description = computed(() => {
+  let equipment = npcStore.getValue('equipment')
+  const weapons = squire.items
+  if (weapons.length) {
+    equipment = `${equipment}, ${weapons[Math.floor(Math.random() * weapons.length)]}`
+  }
+  return equipment
+})
 
-  const item = templates.find((item) => item.name === value)
-  npcStore.setValue('guard', item?.guard ?? '')
-  npcStore.setValue('description', item?.description ?? '')
-}
 function setSparks(sparks) {
   npcStore.setSparks(sparks)
 }
@@ -46,47 +38,30 @@ function copyNpc() {
     copyButton.innerText = originalText
   }, 2000)
 }
-function clearNpc() {
-  rarity.value = ''
-  type.value = ''
-  npcStore.clearNpc()
-}
 </script>
 
 <template>
   <section id="npc">
-    <h2 class="page-title">Make an NPC</h2>
-    <nav class="choice choice--rarity">
-      <button
-        v-for="item in npcs"
-        :key="item.id"
-        @click="setRarity(item.name)"
-        :class="['button', rarity === item.name ? 'active' : '']"
-      >
-        {{ item.label }}
-      </button>
-    </nav>
-    <nav class="choice choice--type" v-if="rarity">
-      <button
-        v-for="item in templates"
-        :key="item.id"
-        @click="setType(item.name)"
-        :class="['button', type === item.name ? 'active' : '']"
-      >
-        {{ item.label }}
-      </button>
-    </nav>
-    <button v-if="type" class="clear-npc" @click="clearNpc">start over</button>
-    <div class="npc__card" ref="npcCard" v-if="type">
+    <h2 class="page-title">Random Squire</h2>
+    <div class="npc__card" ref="npcCard">
       <article>
         <NpcNameDisplay :npc="npcStore.getNpc()" @set-name="npcStore.setValue('name', $event)" />
         <NpcVirtueDisplay
           :npc="npcStore.getNpc()"
-          npc-type="npc"
+          npcType="squire"
           @set-virtues="npcStore.setValue('virtues', $event)"
         />
         <div>
-          <p>{{ npcStore.getNpc().description }}</p>
+          <p class="description">
+            {{ description }},
+            <span class="steed"
+              >Pony (<span
+                ><strong>VIG</strong> 7, <strong>CLA</strong> 7, <strong>SPI</strong> 2, 2<strong
+                  >GD</strong
+                ></span
+              >)</span
+            >
+          </p>
         </div>
       </article>
       <NpcSparkDisplay :npc="npcStore.getNpc()" @set-sparks="setSparks" />
@@ -146,16 +121,12 @@ article {
   background: var(--color-highlight);
   color: var(--color-background);
 }
-.clear-npc {
-  display: block;
+.steed span {
+  font-weight: 600;
+}
+.steed strong {
   font-size: 0.875em;
-  cursor: pointer;
-  /* width: 100%;
-  max-width: 200px; */
-  margin: 1rem auto;
-  border: 0;
-  border-bottom: 1px solid var(--color-highlight);
-  background: transparent;
-  padding: 0.25em;
+  display: inline-block;
+  font-weight: 400;
 }
 </style>

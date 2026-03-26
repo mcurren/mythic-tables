@@ -5,30 +5,41 @@ const props = defineProps({
   npc: {
     type: Object,
     required: true
+  },
+  npcType: {
+    type: String,
+    required: true
   }
 })
 
-function rollDice() {
-  const d6 = Math.floor(Math.random() * 6) + 1
-  const d12 = Math.floor(Math.random() * 12) + 1
-  return d6 + d12
+function rollDice(type = 'npc') {
+  let resultOne
+  let resultTwo
+  if (type === 'npc') {
+    resultOne = Math.floor(Math.random() * 6) + 1
+    resultTwo = Math.floor(Math.random() * 12) + 1
+  } else if (type === 'squire') {
+    resultOne = Math.floor(Math.random() * 6) + 1
+    resultTwo = Math.floor(Math.random() * 6) + 1
+  }
+  return resultOne + resultTwo
 }
 function rollVirtues() {
   return [
     {
       label: 'VIG',
       name: 'vigour',
-      value: rollDice()
+      value: rollDice(props.npcType)
     },
     {
       label: 'CLA',
       name: 'clarity',
-      value: rollDice()
+      value: rollDice(props.npcType)
     },
     {
       label: 'SPI',
       name: 'spirit',
-      value: rollDice()
+      value: rollDice(props.npcType)
     }
   ]
 }

@@ -77,21 +77,19 @@ export const npcTable = [
   }
 ]
 
-export const squireTable = [
-  {
-    label: 'Squire',
-    name: 'squire',
-    virtues: '2d6',
-    guard: '1',
-    equipment: 'Dagger (d6)',
-    items: [
-      'Cudgel (d8 hefty)',
-      'Axe (d8 hefty)',
-      'Hatchet (d6)',
-      'Shortbow (d6 long)',
-      'Shield (d4, A1)',
-      'Three Javelins (d6)'
-    ],
-    steed: 'Pony (VIG 7, CLA 7, SPI 2, 2GD)'
-  }
-]
+export const squireTable = {
+  label: 'Squire',
+  name: 'squire',
+  virtues: '2d6',
+  guard: '1',
+  equipment: 'Dagger (d6)',
+  items: [
+    'Cudgel (d8 hefty)',
+    'Axe (d8 hefty)',
+    'Hatchet (d6)',
+    'Shortbow (d6 long)',
+    'Shield (d4, A1)',
+    'Three Javelins (d6)'
+  ],
+  steed: 'Pony (VIG 7, CLA 7, SPI 2, 2GD)'
+}

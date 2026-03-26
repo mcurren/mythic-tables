@@ -45,8 +45,8 @@ export const useSquireStore = defineStore('squire', {
   state: () => ({
     name: '',
     virtues: [],
-    guard: '',
-    equipment: '',
+    guard: '1',
+    equipment: 'Dagger (d6)',
     weapon: '',
     sparks: []
   }),
@@ -56,15 +56,26 @@ export const useSquireStore = defineStore('squire', {
       this['virtues'][virtue] = this['virtues'][virtue] || false
       this['virtues'][virtue] = value
     },
-    setSparks(sparks) {
+    setSparks(array) {
       this['sparks'] = this['sparks'] || []
-      this['sparks'] = sparks
+      this['sparks'] = array
     },
     setValue(name, value) {
       this[name] = value
     },
     getValue(name) {
       return this[name]
+    },
+    getNpc() {
+      return this
+    },
+    clearNpc() {
+      this.name = ''
+      this.virtues = []
+      this.guard = '1'
+      this.equipment = 'Dagger (d6)'
+      this.weapon = ''
+      this.sparks = []
     }
   }
 })

@@ -27,7 +27,9 @@ onMounted(() => {
     <p>
       <strong>Name:</strong> <span class="name">{{ props.npc.name }}</span
       >&nbsp;
-      <span>({{ props.npc.type }}, {{ props.npc.rarity }})</span>
+      <span v-if="props.npc.type && props.npc.rarity"
+        >({{ props.npc.type }}, {{ props.npc.rarity }})</span
+      >
     </p>
     <button class="button" @click="rollName()">re-roll</button>
   </div>
