@@ -41,7 +41,7 @@ function copyNpc() {
 </script>
 
 <template>
-  <section id="npc">
+  <section id="squire">
     <h2 class="page-title">Random Squire</h2>
     <div class="npc__card" ref="npcCard">
       <article>

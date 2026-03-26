@@ -99,6 +99,11 @@ function clearNpc() {
 section {
   width: 100%;
 }
+@media (min-width: 1200px) {
+  section {
+    min-height: 1000px;
+  }
+}
 .choice {
   display: flex;
   flex-wrap: wrap;

@@ -109,9 +109,9 @@ a,
   }
 }
 @media (min-width: 900px) {
-  .spark-tables {
+  /* .spark-tables {
     flex: unset;
-  }
+  } */
   .spark-tables__content {
     grid-template-columns: repeat(3, 1fr);
   }
