@@ -42,7 +42,6 @@ watch(
   async (newState, oldState) => {
     if (newState !== oldState) {
       rollOnTable(props.section, props.tableData.name, props.tableData.columns)
-      console.log('State changed, rolling on table:', props.tableData.name)
     }
   }
 )
