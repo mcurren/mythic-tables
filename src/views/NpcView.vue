@@ -109,14 +109,26 @@ section {
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
-  margin: 1em 2em;
+  margin: 1em 0;
 }
 .choice--type {
   font-size: 0.9em;
   margin-block: 0;
+  gap: 0.5em;
 }
+/* @media (min-width: 1200px) {
+  .choice--type {
+    padding-inline: 1em;
+  }
+} */
 .button {
   padding: 0.5em 1em;
+  min-width: calc(33.3% - 1em);
+}
+@media (min-width: 800px) {
+  .button {
+    min-width: 238px;
+  }
 }
 .button.active {
   background: var(--color-highlight);
