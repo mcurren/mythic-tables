@@ -18,6 +18,15 @@ const description = computed(() => {
   return equipment
 })
 
+const flavor = computed(() => {
+  const flavors = squire.flavor
+  if (flavors.length) {
+    const flavorItem = flavors[Math.floor(Math.random() * flavors.length)]
+    return `${flavorItem.label}: ${flavorItem.items[Math.floor(Math.random() * flavorItem.items.length)]}`
+  }
+  return ''
+})
+
 function setSparks(sparks) {
   npcStore.setSparks(sparks)
 }
@@ -59,9 +68,10 @@ function copyNpc() {
                 ><strong>VIG</strong> 7, <strong>CLA</strong> 7, <strong>SPI</strong> 2, 2<strong
                   >GD</strong
                 ></span
-              >)</span
+              >).</span
             >
           </p>
+          <p class="flavor">{{ flavor }}</p>
         </div>
       </article>
       <NpcSparkDisplay :npc="npcStore.getNpc()" @set-sparks="setSparks" />
@@ -120,6 +130,9 @@ article {
 .copy-npc:hover {
   background: var(--color-highlight);
   color: var(--color-background);
+}
+.steed {
+  white-space: nowrap;
 }
 .steed span {
   font-weight: 600;

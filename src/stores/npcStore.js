@@ -48,7 +48,8 @@ export const useSquireStore = defineStore('squire', {
     guard: '1',
     equipment: 'Dagger (d6)',
     weapon: '',
-    sparks: []
+    sparks: [],
+    flavor: ''
   }),
 
   actions: {
