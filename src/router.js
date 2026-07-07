@@ -8,6 +8,7 @@ import CombatView from './views/CombatView.vue'
 import InspirationView from './views/InspirationView.vue'
 import NpcView from './views/NpcView.vue'
 import SquireView from './views/SquireView.vue'
+import KnightView from './views/KnightView.vue'
 
 const routes = [
   { path: '/', name: 'inspiration', component: InspirationView },
@@ -16,7 +17,8 @@ const routes = [
   { path: '/people', name: 'people', component: PeopleView },
   { path: '/combat', name: 'combat', component: CombatView },
   { path: '/npc', name: 'make an npc', component: NpcView },
-  { path: '/squire', name: 'random squire', component: SquireView }
+  { path: '/squire', name: 'random squire', component: SquireView },
+  { path: '/knight', name: 'make a knight', component: KnightView }
 ]
 
 const router = createRouter({

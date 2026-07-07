@@ -7,9 +7,14 @@ const navItems = router.getRoutes().map((route) => ({ name: route.name, path: ro
   <header>
     <h1><span>Mythic</span> Sparks</h1>
     <nav>
-      <RouterLink class="button" v-for="item in navItems" :key="item.path" :to="item.path">{{
-        item.name
-      }}</RouterLink>
+      <RouterLink
+        class="button"
+        v-for="item in navItems"
+        :class="`nav-item nav-item--${item.name}`"
+        :key="item.path"
+        :to="item.path"
+        >{{ item.name }}</RouterLink
+      >
     </nav>
   </header>
   <main>
