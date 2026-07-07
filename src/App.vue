@@ -35,13 +35,22 @@ const navItems = router.getRoutes().map((route) => ({ name: route.name, path: ro
 
 <style scoped>
 header {
-  padding-block: 2rem;
   text-align: center;
   max-width: 100%;
 }
+@media (max-width: 1199px) {
+  header {
+    padding-block-end: 2rem;
+  }
+}
 h1 {
   font-weight: 400;
-  font-size: 5em;
+  font-size: 3.75em;
+}
+@media (min-width: 650px) {
+  h1 {
+    font-size: 5em;
+  }
 }
 h1 span {
   display: block;
@@ -66,12 +75,17 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1em 1.5em;
+  gap: 0.75em 0.5em;
   padding-block-start: 2rem;
   text-transform: lowercase;
 }
 nav a {
   padding: 0.25em 1em;
+}
+@media (max-width: 1199px) {
+  nav {
+    max-width: 600px;
+  }
 }
 @media (min-width: 1200px) {
   nav {
@@ -85,6 +99,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
+  text-align: center;
   padding: 3rem 2rem 0;
 }
 </style>

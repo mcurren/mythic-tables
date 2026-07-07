@@ -90,7 +90,7 @@ function clearNpc() {
         </div>
       </article>
       <NpcSparkDisplay :npc="npcStore.getNpc()" @set-sparks="setSparks" />
-      <button class="copy-npc" @click="copyNpc">copy to clipboard</button>
+      <button class="copy-npc button" @click="copyNpc">copy to clipboard</button>
     </div>
   </section>
 </template>
@@ -135,7 +135,7 @@ section {
   color: var(--color-background);
 }
 .npc__card {
-  border: 1px solid var(--color-highlight);
+  border: 1px solid var(--color-border);
   padding: 1.5em;
   margin: 1em auto 2em;
   max-width: 600px;
@@ -148,15 +148,17 @@ article {
   margin-block-end: 0.5em;
 }
 .copy-npc {
-  position: absolute;
+  /* position: absolute;
   top: 100%;
   left: -1px;
   right: -1px;
   border: 0;
   border: 1px solid var(--color-highlight);
-  color: var(--color-highlight);
+  color: var(--color-highlight); */
+  margin-block-start: 1.5em;
   padding: 0.5em 0.5em;
   font-size: 0.875em;
+  width: 100%;
   cursor: pointer;
 }
 .copy-npc:hover {
