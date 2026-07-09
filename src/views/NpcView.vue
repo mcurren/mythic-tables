@@ -101,7 +101,7 @@ section {
 }
 @media (min-width: 1200px) {
   section {
-    min-height: 43.8421052632em;
+    min-height: 56rem;
   }
 }
 .choice {

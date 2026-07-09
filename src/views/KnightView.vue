@@ -77,6 +77,11 @@ function copyNpc() {
 section {
   width: 100%;
 }
+@media (min-width: 1200px) {
+  section {
+    min-height: 47.5625rem;
+  }
+}
 .choice {
   display: flex;
   flex-wrap: wrap;
