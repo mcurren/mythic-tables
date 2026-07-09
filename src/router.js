@@ -17,8 +17,8 @@ const routes = [
   { path: '/people', name: 'people', component: PeopleView },
   { path: '/combat', name: 'combat', component: CombatView },
   { path: '/npc', name: 'make an npc', component: NpcView },
-  { path: '/squire', name: 'random squire', component: SquireView },
-  { path: '/knight', name: 'make a knight', component: KnightView }
+  { path: '/knight', name: 'make a knight', component: KnightView },
+  { path: '/squire', name: 'random squire', component: SquireView }
 ]
 
 const router = createRouter({
